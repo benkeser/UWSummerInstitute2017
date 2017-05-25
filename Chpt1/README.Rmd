@@ -2,12 +2,9 @@
 title: "Chapter 1"
 author: "David Benkeser, Marco Carone, Larry Kessler"
 output: 
-    output: md_document
-    toc: true
-    highlight: default
+    md_document:
+        variant: markdown_github
 ---
-
-# Chapter 1
 
 ## Simulating simple SCM
 In this example, we illustrate how to simulate from a simple SCM. We will need the MASS package, which can be installed as follows. 
