@@ -1,11 +1,10 @@
 ---
-title: "Bounded TMLE estimates of cumulative incidence"
+title: "Chapter 1"
 author: "David Benkeser, Marco Carone, Larry Kessler"
 output: 
     output: md_document
     toc: true
-    theme: journal
-    highlight: github
+    highlight: default
 ---
 
 # Chapter 1
@@ -31,7 +30,7 @@ sim_U <- function(n){
         n = n, # draw n values 
         mu=c(0,0,0), # mean vector
         Sigma = diag(3) # identity covariance matrix
-            ))
+            ),ncol=3)
     # give the columns names
     colnames(U) <- c("U_W","U_A","U_Y")
     
@@ -53,7 +52,7 @@ f_W <- function(U_W){
 }
 # f_A(W, U_A) = 1/(1 + exp(U_A + W))
 f_A <- function(W, U_A){
-    return(1/(1 + exp(U_A + W)))
+    return(as.numeric(1/(1 + exp(U_A + W))>0.5))
 }
 # f_Y(W,A,U_Y) &= exp(-2 + W - A + U_Y) 
 f_Y <- function(W, A, U_Y){
@@ -90,11 +89,11 @@ sim_SCM <- function(n){
     # draw U from P_U using function sim_U
     U <- sim_U(n=n)
     # generate W via f_W with input U_W
-    W <- f_W(U_W = U$U_W)
+    W <- f_W(U_W = U[,1])
     # generate A via f_A with input (W, U_A)
-    A <- f_A(W = W, U_A = U$U_A)
+    A <- f_A(W = W, U_A = U[,2])
     # generate Y via f_Y with input (W, A, U_Y)
-    Y <- f_Y(W = W, A = A, U_Y = U$U_Y)
+    Y <- f_Y(W = W, A = A, U_Y = U[,3])
     # return a data.frame with data
     return(data.frame(W = W, A = A, Y = Y))
 }
