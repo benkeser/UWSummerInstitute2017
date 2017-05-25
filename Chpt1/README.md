@@ -1,3 +1,6 @@
+Chapter 1
+=========
+
 Simulating simple SCM
 ---------------------
 
