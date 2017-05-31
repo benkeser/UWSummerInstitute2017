@@ -1,11 +1,9 @@
 ---
 title: "Modern Statistical Learning Methods for Observational Biomedical Data and Applications to Comparative Effectiveness Research"
 author: "David Benkeser, Marco Carone, Larry Kessler"
-output: 
-    output: md_document
-    toc: true
-    theme: journal
-    highlight: github
+output:
+  md_document:
+    variant: markdown_github
 ---
 
 # Chapter 1
