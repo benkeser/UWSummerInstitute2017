@@ -1,10 +1,6 @@
--   [Chapter 1](#chapter-1)
-    -   [Simulating simple SCM](#simulating-simple-scm)
-    -   [Intervening on simple SCM](#intervening-on-simple-scm)
-    -   [SCM vs. statistical model](#scm-vs.-statistical-model)
-
-Chapter 1
-=========
+-   [Simulating simple SCM](#simulating-simple-scm)
+-   [Intervening on simple SCM](#intervening-on-simple-scm)
+-   [SCM vs. statistical model](#scm-vs.-statistical-model)
 
 Simulating simple SCM
 ---------------------
