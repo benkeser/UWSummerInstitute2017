@@ -4,6 +4,7 @@ author: "David Benkeser, Marco Carone, Larry Kessler"
 output:
   md_document:
     variant: markdown_github
+    toc: true
 ---
 
 # Chapter 1
