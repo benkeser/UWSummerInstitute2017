@@ -1,6 +1,6 @@
 -   [Simulating simple SCM](#simulating-simple-scm)
 -   [Intervening on simple SCM](#intervening-on-simple-scm)
--   [SCM vs. statistical model](#scm-vs.-statistical-model)
+-   [SCMs and statistical models](#scms-and-statistical-models)
 
 Simulating simple SCM
 ---------------------
@@ -184,8 +184,8 @@ sim_intervention_SCM_1 <- function(n, a){
 
 Notice that this function is exactly the same as `sim_SCM_1` except that it replaces the line `A <- f_A_1(W = W, U_A = U$U_A)` with `A <- a`. This change in code represents intervening in the observed data SCM.
 
-SCM vs. statistical model
--------------------------
+SCMs and statistical models
+---------------------------
 
 This exercise illustrates how different choices of *P*<sub>*U*</sub> and *F* result in different distributions for the observed data. Recall that an SCM is a collection of different distributions for *U* and different structural equations *F*. In the above exercises, we wrote a function `sim_SCM_1` that drew *U* from a multivariate normal distribution with identity covariance matrix (via `sim_U_1`) and then used `f_W_1`, `f_A_1`, and `f_Y_1` to generate the observed data. We used `_1` to denote that these were just one choice of distribution for *U* and structural equations that could be in our SCM.
 
